@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Product App</title>
+    </head>
+    <body>
+        <div id="app">
+            <div class="product">
+                <div class="product-image">
+                    <a :href="image.link">
+                        <img :src="image.image" :alt="image.alt">
+                    </a>
+                </div>
+                <div class="product-info">
+                    <h1>{{ product }}</h1>
+                    <p v-show="instock">In Stock</p>
+                    <p v-show="!instock">Out of Stock</p>
+                    <p v-show="onSale">On Sale!</p>
+                </div>
+            </div>
+        </div>
+        <script src="../../vue.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
